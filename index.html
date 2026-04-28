@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Gradient Generator Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CSS Gradient Gallery</h1>
+    <p>Click any gradient to copy CSS code</p>
+    
+    <div class="controls">
+      <div class="control-group">
+        <label>Direction:</label>
+        <select id="direction">
+          <option value="to right">To Right</option>
+          <option value="to left">To Left</option>
+          <option value="to top">To Top</option>
+          <option value="to bottom">To Bottom</option>
+          <option value="to top right">Top Right</option>
+          <option value="to top left">Top Left</option>
+          <option value="135deg">135deg</option>
+          <option value="45deg">45deg</option>
+        </select>
+      </div>
+      
+      <div class="control-group">
+        <label>Color 1:</label>
+        <input type="color" id="color1" value="#667eea">
+      </div>
+      
+      <div class="control-group">
+        <label>Color 2:</label>
+        <input type="color" id="color2" value="#764ba2">
+      </div>
+    </div>
+
+    <div class="live-preview" id="livePreview">
+      <span id="liveCode">background: linear-gradient(to right, #667eea, #764ba2);</span>
+      <button id="copyLive">Copy</button>
+    </div>
+
+    <h2>Preset Gallery</h2>
+    <div class="gallery" id="gallery"></div>
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+  <script src="script.js"></script>
+</body>
+</html>
