@@ -3,49 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Gradient Generator Gallery</title>
+  <title>CSS Gradient Generator Gallery - 180+ Free CSS Background Gradients</title>
+  <meta name="description" content="Free CSS gradient generator with 180+ beautiful presets. Copy CSS code for linear, radial gradients. Generate custom 2-color, 3-color gradients for your website background.">
+  <meta name="keywords" content="css gradient generator, css background gradient, linear gradient css, gradient color picker, css gradient code, free gradient gallery">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>CSS Gradient Gallery</h1>
-    <p>Click any gradient to copy CSS code</p>
-    
+    <header>
+      <h1>CSS Gradient Generator Gallery</h1>
+      <p class="subtitle">180+ Free, Copy-Paste CSS Gradients for Web Designers & Developers. Generate linear, radial & mesh gradients instantly.</p>
+    </header>
+
+    <section class="intro">
+      <h2>What is a CSS Gradient?</h2>
+      <p>A CSS gradient displays smooth transitions between two or more colors. Use gradients as backgrounds for buttons, cards, hero sections, or full websites. All gradients here are 100% free for personal and commercial use.</p>
+    </section>
+
     <div class="controls">
+      <div class="control-group">
+        <label>Type:</label>
+        <select id="gradientType">
+          <option value="linear">Linear</option>
+          <option value="radial">Radial</option>
+        </select>
+      </div>
       <div class="control-group">
         <label>Direction:</label>
         <select id="direction">
-          <option value="to right">To Right</option>
-          <option value="to left">To Left</option>
-          <option value="to top">To Top</option>
-          <option value="to bottom">To Bottom</option>
-          <option value="to top right">Top Right</option>
-          <option value="to top left">Top Left</option>
-          <option value="135deg">135deg</option>
-          <option value="45deg">45deg</option>
+          <option value="to right">To Right →</option>
+          <option value="to bottom">To Bottom ↓</option>
+          <option value="135deg">135 Degree</option>
+          <option value="circle">Circle</option>
         </select>
       </div>
-      
       <div class="control-group">
         <label>Color 1:</label>
         <input type="color" id="color1" value="#667eea">
       </div>
-      
       <div class="control-group">
         <label>Color 2:</label>
         <input type="color" id="color2" value="#764ba2">
       </div>
+      <div class="control-group">
+        <label>Color 3:</label>
+        <input type="color" id="color3" value="#f093fb">
+        <button id="toggleColor3">+ Add</button>
+      </div>
     </div>
 
     <div class="live-preview" id="livePreview">
-      <span id="liveCode">background: linear-gradient(to right, #667eea, #764ba2);</span>
-      <button id="copyLive">Copy</button>
+      <span id="liveCode"></span>
+      <button id="copyLive">Copy CSS</button>
     </div>
 
-    <h2>Preset Gallery</h2>
-    <div class="gallery" id="gallery"></div>
-  </div>
+    <section class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="blue">Blue</button>
+      <button class="filter-btn" data-filter="sunset">Sunset</button>
+      <button class="filter-btn" data-filter="dark">Dark</button>
+      <button class="filter-btn" data-filter="pastel">Pastel</button>
+    </section>
 
+    <h2>Popular CSS Gradient Presets</h2>
+    <div class="gallery" id="gallery"></div>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <h3>How to use CSS gradient in background?</h3>
+      <p>Copy the CSS code and paste it in your stylesheet: <code>div { background: linear-gradient(...); }</code></p>
+      
+      <h3>Can I use these gradients for commercial projects?</h3>
+      <p>Yes, all gradients are free for personal and commercial use without attribution.</p>
+      
+      <h3>What's the difference between linear and radial gradient?</h3>
+      <p>Linear gradients go in one direction. Radial gradients spread from a center point outward in a circle.</p>
+    </section>
+
+    <footer>
+      <p>Made for developers by developers. © 2026 CSS Gradient Gallery</p>
+    </footer>
+  </div>
   <div class="toast" id="toast">Copied to clipboard!</div>
   <script src="script.js"></script>
 </body>
